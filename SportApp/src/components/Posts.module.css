@@ -1,0 +1,19 @@
+.postContainer{display: flex;
+margin: 15px;
+align-items: center;
+justify-content: space-evenly;}
+
+.plan{display: flex;
+    color: white;
+    margin:30px auto;
+    opacity: 0.6;
+    font-style: italic;
+}
+
+.plan::after, .plan::before{
+  flex: 1;
+  content: "";
+  margin: 1rem;
+  height: 1px;
+  background-color: rgba(225,225,225,0.3);
+}
