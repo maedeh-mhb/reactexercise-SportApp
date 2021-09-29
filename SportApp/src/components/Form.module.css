@@ -1,0 +1,11 @@
+.formContainer{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 30%;
+    left: 60%;
+    background-color: rgba(32, 6, 48,0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
