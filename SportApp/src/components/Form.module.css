@@ -1,11 +1,158 @@
-.formContainer{
+.container {
     display: flex;
+    width: 350px;
+    height: 500px;
+    align-items: center;
     flex-direction: column;
     position: absolute;
-    top: 30%;
-    left: 60%;
+    top: 7%;
+    left: 45%;
     background-color: rgba(32, 6, 48,0.5);
-    padding: 20px;
     border-radius: 10px;
 }
 
+.formContainer {
+    padding: 10px 20px;
+    width: 85%;
+ }
+
+.header {
+    color: white;
+    margin:15px auto;
+    text-align: center;
+    text-shadow: 2px 2px #1d0431
+}
+
+.formInput {
+    color: white;
+    border-radius: 15px;
+    padding: 5px;
+    background-color: rgba(225, 225, 225, 0.3);
+    border:none}
+
+.incomplete {
+    color: white;
+    border-radius: 15px;
+    padding: 7px;
+    background-color: rgba(225, 225, 225, 0.3);
+    border: 1px solid rgb(134, 20, 73);
+}
+
+
+
+.formInput:focus,
+.incomplete:focus {
+    outline: none;
+    border: 1px solid rgb(45, 211, 156);
+}
+
+.formField :nt {
+    height: 40px;
+} 
+
+.formField {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    height: 65px;
+    font-size:0.7rem;
+    margin-bottom: 27px;
+}
+
+.formField label {
+    margin-bottom: 5px;
+    color: white;
+}
+
+.formField span {
+    margin:5px auto;
+    font-size: 0.6rem;
+    margin-left: 5px;
+    color: rgb(211, 54, 15);
+    font-weight: bold;
+}
+
+.checkbox  {
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+input[type="checkbox"] {
+    border:1px solid white;
+    width: 12px;
+    height: 11px;
+    border-radius: 10px;
+    appearance: none;
+    background-color:rgba(225, 225, 225, 0.2);
+    
+}
+
+
+.checkboxContainer label{
+    color: rgb(45, 211, 156);
+    font-size: 0.6rem;
+}
+
+input[type="checkbox"]:checked {
+    background-color: rgb(31, 159, 168);
+    border: none;
+}
+
+.formButtons {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.formButtons span {
+    font-size: 0.6rem;
+    margin-top:10px;
+}
+
+.formButtons a{
+    border-bottom: 1px solid white;
+}
+
+.formButtons a:hover {
+    color: rgb(211, 54, 15);
+    cursor: pointer;
+    border-bottom: 1px solid rgb(211, 54, 15);
+}
+
+.formButtons button {
+    width:60px;
+    padding: 7px;
+    font-size: 0.7rem;
+    border:none;
+    border-radius: 5px;
+    background-color: rgba(141, 54, 199, 0.5);
+    color: rgb(17, 1, 27);
+    font-weight: bold;
+    cursor: pointer;
+    transition: all ease-in-out;
+}
+
+
+.formButtons button:hover {
+    background-color: rgba(204, 164, 231, 0.5);
+    color: white;
+}
+
+.checkboxContainer{
+    display: flex;
+    color: white;
+    flex-direction: column;
+    height: 30px;
+    font-size:0.7rem;
+    margin-bottom: 15px;
+    margin-top:20px
+}
+
+.formField:nth-child(3) span{
+    margin-bottom: 20px;
+}

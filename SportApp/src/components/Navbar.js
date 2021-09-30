@@ -20,7 +20,7 @@ const Navbar = () => {
                  </ul>
                 </div>
                 <div className={styles.logoContainer}>
-                <Link> <img className={styles.logo}  src={logo} alt="logo" /></Link>
+                    <img className={styles.logo}  src={logo} alt="logo" />
                     <img className={styles.menuIcon} src={menuIcon} alt="menu"/>
                 </div>
             </div> 
