@@ -4,6 +4,7 @@ import Landing from './components/Landing';
 import { Route, Switch } from 'react-router-dom';
 import Collections from './components/Collections';
 
+
 class App extends Component {
   render() {
     return (
