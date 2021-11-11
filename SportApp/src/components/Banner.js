@@ -1,29 +1,30 @@
-import React, { useState } from 'react';
-import Navbar from './Navbar';
+import React, {useContext} from 'react';
+import MainNavbar from './MainNavbar';
 import styles from "./Banner.module.css";
 import main from "../images/main.jpg";
-import SignUp from './SignUp';
-import Login from './Login';
-import { Route,Switch,Redirect} from 'react-router-dom';
-
+import { Link } from 'react-router-dom';
+import { LoginContext } from '../context/LoginContextProvider';
 
 const Banner = () => {
-    const [isLoggedIn,setIsLoggedIn]=useState(false);
-    const statusHandler=()=>{
-        setIsLoggedIn(!isLoggedIn) 
-    }
+    const {state2} = useContext(LoginContext);
 
     return (
         <div className={styles.mainContainer}>
+            <div>
             <img className={styles.mainImage} src={main} alt="Banner"/>
-            <Navbar/>          
+            <MainNavbar/>   
+            <div className={styles.main}>   
+            <span className={styles.left}>   
             <h1>NTC</h1>
-            <p>Nike Training Club</p>    
-            {isLoggedIn?<Login statusHandler={statusHandler}/>:<SignUp statusHandler={statusHandler}/>}
-            <Switch>
-            <Route path="/login" component={Login} />
-            <Route path="/signup" component={SignUp} />  
-            </Switch>
+            <p>Nike Training Club</p>  
+            </span>
+            <span > 
+            {state2.isLoggedIn ?  <div className={styles.title}><h1>Start Your Fitness Journey !</h1></div> :<div className={styles.right}><h1>BECOME A NIKE MEMBER</h1>
+            <p>Create your Nike Member profile and get first access to the very best of Nike products, inspiration and community.</p>  
+            <Link to="/signup"><button>Create Account</button></Link></div>}  
+            </span>
+            </div> 
+            </div>
         </div>
     );
 };

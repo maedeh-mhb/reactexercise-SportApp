@@ -35,7 +35,7 @@
     background-color: rgba(225,225,225,0.5);
     bottom: 0px;
     left: 0;
-    color: rgb(16, 3, 24);
+    color: rgb(27, 2, 15);
     cursor: pointer;
     }
  
@@ -48,7 +48,7 @@
     font-weight: bold;
     font-size: 12px;
     margin: 15px;
-    background-color: rgba(32, 6, 48,0.3);}
+    background-color: rgba(180, 99, 141,0.6);}
 
 .counter{
     padding: 5px;
@@ -58,7 +58,7 @@
     justify-content: space-between;
     font-size: 0.8rem;
     margin: 15px;
-    background-color: rgba(32, 6, 48,0.3);
+    background-color: rgba(180, 99, 141,0.6);
     border-radius: 25px;
 }   
 

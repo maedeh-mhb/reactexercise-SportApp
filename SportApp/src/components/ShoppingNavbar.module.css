@@ -1,0 +1,53 @@
+.navbarContainer {
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 90px;
+  background-color: rgba(10, 0, 15, 0.2);
+  border-radius: 5px;
+}
+
+.menu {
+    width: 300px;
+    font-size: 0.8rem;
+    justify-content: space-evenly;
+    display: flex;
+    color: white;
+    cursor: pointer;
+}
+
+.menu a{
+    color: white;
+}
+
+.menu li:hover {
+border-bottom: 1px solid white;
+font-weight: bold;
+}
+
+.navbarIcons {
+    width: 80px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.navbarIcons img {
+    height: 22px;
+    width: 22px;
+    cursor: pointer;
+}
+
+.counter{
+    position: relative;
+    width: 30px
+}
+
+.counter span {
+    position: absolute;
+    top:-2px;
+    right: 2px;
+    color: rgb(248, 88, 155);
+    font-weight: bolder;
+    font-size: 0.8rem;
+}

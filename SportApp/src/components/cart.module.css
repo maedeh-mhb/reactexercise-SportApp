@@ -1,0 +1,54 @@
+.itemsImage {
+width:90px;
+height: 90px;
+border-radius: 5px;}
+
+.itemsContainer {
+    display: flex;
+    justify-content: space-evenly;
+    width: 700px;
+    margin: 25px;
+    align-items: center;
+    height: 100px;
+    background-color:  rgba(153, 28, 86,0.7);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.itemsContainer:hover {
+    box-shadow: 3px 3px 2px 0px rgba(199, 67, 129, 0.7);
+}
+
+.buttonContainer button {
+    color: rgb(27, 2, 15);
+    background-color: rgba(206, 44, 235, 0.7);
+    padding: 3px;
+    font-size: 0.7rem;
+    border-radius: 5px;
+    font-weight: bold;
+    margin: 3px;
+    width: 25px;
+}
+
+.buttonContainer button:hover{
+    background-color:  rgb(116, 30, 74);
+    color: white;
+ }
+
+ .quantity {
+     color: white;
+     background-color: rgba(206, 44, 235, 0.7);
+     font-size: 0.7rem;
+     border-radius: 5px;
+     padding: 5px;
+ }
+
+ .title {
+     color: white;
+     font-size: 0.7rem;
+     text-align: center;
+ }
+
+ .title p {
+     margin-top: 5px;
+ }

@@ -1,7 +1,9 @@
-.container{
+.productContainer{
+    padding: 30px;
     display: flex;
-margin: 15px;
-align-items: center;
-justify-content: space-evenly;
-flex-wrap: wrap;
+    flex-direction: row;
+    margin: 15px;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }

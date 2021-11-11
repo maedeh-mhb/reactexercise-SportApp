@@ -1,26 +1,19 @@
-import React, { Component } from 'react';
-import axios from "axios"
-import Post from './Post';
+import React,{useContext} from 'react';
+import Product from './Product';
 import Styles from './Collections.module.css';
+import { ProductContext } from '../context/ProductContextProvider';
+import ShoppingNavbar from './ShoppingNavbar';
 
-class Collections extends Component {
-    constructor(props){
-        super(props);
-        this.state={products:[]}
-    }
-    componentDidMount(){
-            axios.get(' https://wger.de/api/v2/exerciseimage')
-            .then(response=>this.setState({products:response.data.results}))
-    }
-    render() {
-        const {products}=this.state;
-        return (
-            <div className={Styles.container}>
-                {products.length?products.map(product=><Post key={product.id} image={product.image}  />):<h1>Loading...</h1>}
-                {}
-            </div>
-        );
-    }
-}
+const Collections = () => {
+    const products=useContext(ProductContext);
+    return (
+        <div>
+            <ShoppingNavbar />  
+             <div className={Styles.productContainer}>  
+                {products.map(product=> <Product key={product.id} productData={product} />)}
+             </div>
+        </div>
+    );
+};
 
 export default Collections;

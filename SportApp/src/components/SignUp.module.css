@@ -1,12 +1,19 @@
+.outerContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
 .container {
+    margin-top: 45px;
     display: flex;
     width: 350px;
     height: fit-content;
     align-items: center;
     flex-direction: column;
-    position: absolute;
-    top: 15%;
-    left: 45%;
     background-color: rgba(32, 6, 48,0.5);
     border-radius: 10px;
 }
@@ -39,15 +46,15 @@
 }
 
 
-
 .formInput:focus,
 .incomplete:focus {
     outline: none;
     border: 1px solid rgb(45, 211, 156);
 }
 
-.formField :nt {
+.formField  {
     height: 40px;
+    margin-top: 30px;
 } 
 
 .formField {
@@ -95,6 +102,14 @@ input[type="checkbox"] {
     font-size: 0.6rem;
 }
 
+.checkboxContainer span {
+    margin:5px auto;
+    font-size: 0.6rem;
+    margin-left: 5px;
+    color: rgb(211, 54, 15);
+    font-weight: bold;
+}
+
 input[type="checkbox"]:checked {
     background-color: rgb(31, 159, 168);
     border: none;
@@ -137,6 +152,15 @@ input[type="checkbox"]:checked {
     transition: all ease-in-out;
 }
 
+.formButtons a {
+    color:rgb(134, 20, 73);
+    font-weight: bold;
+}
+
+.formButtons a:hover {
+    color: white;
+    border-bottom: 1px solid white;
+}
 
 .formButtons button:hover {
     background-color: rgba(204, 164, 231, 0.5);
@@ -153,6 +177,29 @@ input[type="checkbox"]:checked {
     margin-top:20px
 }
 
-.formField:nth-child(3) span{
-    margin-bottom: 20px;
+
+.login {
+    width: 500px;
+    height: 100px;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 10px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    background-color: rgba(153, 28, 86,0.7);
+}
+
+.login h1 {
+    margin-bottom: 45px;
+}
+
+.login a {
+    color: rgb(59, 5, 30);
+    font-size: 0.8rem;
+}
+
+.login a:hover {
+    border-bottom: 1px solid white;
+    color: white;
 }
