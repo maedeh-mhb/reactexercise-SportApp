@@ -4,14 +4,15 @@ import { validate } from '../helper/validate';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { notify } from './toast';
-import { Link } from 'react-router-dom';
+import { Link,useHistory } from 'react-router-dom';
 import { LoginContext } from '../context/LoginContextProvider';
 import MainNavbar from './MainNavbar';
 
 const Login = () => {
 
     const {state2,dispatch,errors,setErrors,touched,setTouched} = useContext(LoginContext);
-   
+   const history=useHistory();
+
     useEffect(()=>{
         setErrors(validate(state2,"login"));
     },[state2,setErrors],[touched])
@@ -21,9 +22,7 @@ const Login = () => {
     }
 
     const changeHandler=(event)=>{   
-           
-                dispatch({...state2, [event.target.name]:event.target.value})
-            
+     dispatch({...state2, [event.target.name]:event.target.value})   
     }
 
    const submitHandler=(event)=>{
@@ -31,6 +30,7 @@ const Login = () => {
      if (!Object.keys(errors).length){
         notify("You are logged in successfully!","success")
         dispatch ({...state2, isLoggedIn :true})
+        history.push("/")
      }
      else{
          notify("please insert your information correctly!")
@@ -45,7 +45,7 @@ const Login = () => {
     return (
         <div className={Styles.outerContainer}>
             <MainNavbar />
-            {!state2.isLoggedIn ?
+            {!state2.isLoggedIn &&
         <div className={Styles.container}>
             <h3 className={Styles.header}>Login</h3>
            <form className={Styles.formContainer}>
@@ -68,10 +68,7 @@ const Login = () => {
            </form>
           
         <ToastContainer toastStyle={{ backgroundColor: "rgb(32, 6, 48)", fontSize:"12px" , color:"white"}} />
-        </div> :<div className={Styles.login}>
-            <h1>You Are Logged In ! </h1>
-           <Link to="/">Back To Home </Link>
-            </div> }
+        </div> }
         </div>
     );
     

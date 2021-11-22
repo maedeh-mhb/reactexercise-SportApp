@@ -5,12 +5,13 @@ import { validate } from '../helper/validate';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { notify } from './toast';
-import { Link } from 'react-router-dom';
+import { Link,useHistory } from 'react-router-dom';
 import MainNavbar from './MainNavbar';
 
 const SignUp = () => {
     
     const {state2,dispatch,errors,setErrors,touched,setTouched} = useContext(LoginContext);
+    const history = useHistory();
 
     useEffect(()=>{
         setErrors(validate(state2,"signUp"));
@@ -33,7 +34,9 @@ const SignUp = () => {
         event.preventDefault();
         if (!Object.keys(errors).length) {
           notify("You are signed up successfully!","success")
-        dispatch ({...state2, isLoggedIn :true})}
+          dispatch ({...state2, isLoggedIn :true})
+          history.push("/")
+    }
         else {
           notify("please insert your information correctly!")
              setTouched ({
@@ -88,11 +91,6 @@ const SignUp = () => {
            </form>
            <ToastContainer toastStyle={{ backgroundColor: "rgb(32, 6, 48)", fontSize:"12px" , color:"white"}} />
         </div>}
-        {state2.isLoggedIn && <div className={Styles.login}>
-            <h1>Thanks for signing up. <br/>
-                Welcome to our community ! </h1>
-           <Link to="/">Back To Home </Link>
-            </div>}
         </div>
     );
 };
