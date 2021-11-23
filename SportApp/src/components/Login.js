@@ -10,26 +10,26 @@ import MainNavbar from './MainNavbar';
 
 const Login = () => {
 
-    const {state2,dispatch,errors,setErrors,touched,setTouched} = useContext(LoginContext);
+    const {state,dispatch,errors,setErrors,touched,setTouched} = useContext(LoginContext);
    const history=useHistory();
 
     useEffect(()=>{
-        setErrors(validate(state2,"login"));
-    },[state2,setErrors],[touched])
+        setErrors(validate(state,"login"));
+    },[state,setErrors],[touched])
 
     const focusHandler=(event)=>{
         setTouched({...touched,[event.target.name]:true})
     }
 
     const changeHandler=(event)=>{   
-     dispatch({...state2, [event.target.name]:event.target.value})   
+     dispatch({...state, [event.target.name]:event.target.value})   
     }
 
    const submitHandler=(event)=>{
      event.preventDefault();
      if (!Object.keys(errors).length){
         notify("You are logged in successfully!","success")
-        dispatch ({...state2, isLoggedIn :true})
+        dispatch ({...state, isLoggedIn :true})
         history.push("/")
      }
      else{
@@ -45,19 +45,19 @@ const Login = () => {
     return (
         <div className={Styles.outerContainer}>
             <MainNavbar />
-            {!state2.isLoggedIn &&
+            {!state.isLoggedIn &&
         <div className={Styles.container}>
             <h3 className={Styles.header}>Login</h3>
            <form className={Styles.formContainer}>
                <div  className={Styles.formField}>
                      <label>Email</label>
-                     <input  className={errors.email &&  touched.email?Styles.incomplete:Styles.formInput}  type="text" name="email" value={state2.email} onChange={changeHandler} onFocus={focusHandler}/>
+                     <input  className={errors.email &&  touched.email?Styles.incomplete:Styles.formInput}  type="text" name="email" value={state.email} onChange={changeHandler} onFocus={focusHandler}/>
                      {errors.email &&  touched.email && <span>{errors.email}</span>}
                </div>
 
                <div className={Styles.formField}>
                      <label>Password</label>
-                     <input className={errors.password && touched.password?Styles.incomplete:Styles.formInput} type="text" name="password" value={state2.password} onChange={changeHandler} onFocus={focusHandler}/>
+                     <input className={errors.password && touched.password?Styles.incomplete:Styles.formInput} type="text" name="password" value={state.password} onChange={changeHandler} onFocus={focusHandler}/>
                      {errors.password && touched.password && <span>{errors.password}</span>}
                 </div>
 
