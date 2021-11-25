@@ -9,6 +9,7 @@ import ShoppingBasket from './components/ShoppingBasket';
 import LoginContextProvider from './context/LoginContextProvider';
 import SignUp from './components/SignUp';
 import Login from './components/Login';
+import ContactUs from './components/ContactUs';
 
 const App =()=> {
   
@@ -23,6 +24,7 @@ const App =()=> {
               <Route path="/signup" component={SignUp} />
               <Route path="/shoppingBasket" component={ShoppingBasket} />
               <Route path="/collections" component={Collections} />
+              <Route path="/contactUs" component={ContactUs} />
               <Route exact path="/" component={HomePage}  />
            </Switch>
            </LoginContextProvider>

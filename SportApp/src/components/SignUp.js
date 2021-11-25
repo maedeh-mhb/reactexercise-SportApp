@@ -51,9 +51,11 @@ const SignUp = () => {
     } 
 
     return (
-        
-        <div className={Styles.outerContainer}>    
+        <>
              <MainNavbar />
+             <div className={Styles.mainContainer}>
+        <div className={Styles.outerContainer}> 
+       
              {!state.isLoggedIn && 
         <div className={Styles.container}>
             <h3 className={Styles.header}>Sign Up</h3>
@@ -92,6 +94,8 @@ const SignUp = () => {
            <ToastContainer toastStyle={{ backgroundColor: "rgb(32, 6, 48)", fontSize:"12px" , color:"white"}} />
         </div>}
         </div>
+        </div>
+        </>
     );
 };
 

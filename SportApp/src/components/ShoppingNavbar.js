@@ -14,8 +14,7 @@ const ShoppingNavbar = () => {
              <div>
                 <ul className={Styles.menu}>
                      <li><Link to="/">Home</Link></li>
-                     <li>Plans</li>
-                     <li>Contact Us</li>
+                     <li><Link to="contactUs">Contact Us</Link></li>
                 </ul>
             </div>
             <div className={Styles.navbarIcons}>

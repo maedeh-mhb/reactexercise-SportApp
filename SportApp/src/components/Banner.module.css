@@ -4,39 +4,35 @@
     position: relative;
     overflow: hidden;  
 }
+
+.innContainer {
+    background-color: #dbbaba;
+    height:700px;
+    border-radius: 10px;
+    overflow: hidden;
+}
 .mainImage{
-    width: 100%;
+    width:50%;
+    height:100%
 }
 
 .main{
     position: absolute;
-    left: 100px;
     right: 100px;
     top: 150px;
-    
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     
 }
 
-.left {
-    width: 200px;
-    margin-top: 45px;
-    color: white;}
-
-.left h1 {
-    font-size: 75px;
-    font-style: italic;
-
-}    
 .right {
-    color: rgb(77, 5, 55);
+    color: 	white;
     border-radius: 5px;
     text-align: center;
     height: 200px;
     width: 400px;
-    background-color: rgba(162, 96, 189, 0.7);
+    background-color: rgba(240, 162, 138, 0.3);
     padding: 25px;
 }
 
@@ -50,7 +46,7 @@
     color: rgb(27, 2, 15);
     padding: 10px;
     border-radius: 5px;
-    background-color: rgba(180, 99, 141,0.6);
+    background-color: rgba(210,173,173,0.7);
     border: none;
     font-weight: bold;
 }

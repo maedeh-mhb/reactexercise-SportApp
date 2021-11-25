@@ -12,17 +12,18 @@
     font-size: 0.8rem;
     justify-content: space-evenly;
     display: flex;
-    color: white;
+    color: rgba(225,225,225,0.7);
     cursor: pointer;
 }
 
 .menu a{
-    color: white;
+    color: rgba(121, 69, 69, 0.7);
 }
 
 .menu li:hover {
-border-bottom: 1px solid white;
+border-bottom: 1px solid rgba(121, 69, 69, 0.7);
 font-weight: bold;
+color: white;
 }
 
 

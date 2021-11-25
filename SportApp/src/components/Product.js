@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import Styles from "./Product.module.css";
-import { splitter } from '../helper/function';
 import { Link } from 'react-router-dom';
 import { CartContext } from '../context/CartContextProvider';
 import { isIncluded } from '../helper/function';
@@ -13,7 +12,7 @@ const Product = ({productData}) => {
     return (
         <div className={Styles.productContainer}>
            <img className={Styles.productImage} src={productData.image} alt="product" />
-           <h3>{ splitter(productData.title)}</h3>
+           <h3>{ productData.name}</h3>
            <span className={Styles.productPrice}>{productData.price} $</span>
            <div className={Styles.detailContainer}>
                <Link to={`/product/${productData.id}`}>Details</Link>

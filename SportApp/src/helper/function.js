@@ -1,8 +1,4 @@
-const splitter=(text)=>{
-const textSplit=text.split(" ");
-const newText=`${textSplit[0]} ${textSplit[1]}`;
-return newText;
-}
+
 
 const isIncluded = (state,id)=> {
    const result = !!state.selectedItems.find(item => item.id === id)
@@ -25,4 +21,4 @@ const sumItems = items => {
    return {itemCounter, total}
 }
 
-export {splitter,isIncluded,quantityCount, sumItems};
+export {isIncluded,quantityCount, sumItems};

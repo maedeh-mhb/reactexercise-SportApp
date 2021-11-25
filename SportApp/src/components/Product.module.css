@@ -5,7 +5,7 @@ margin: 20px auto;
 background-color: rgba(80, 69, 82, 0.3);
 border-radius: 10px;
 overflow: hidden;
-color: white;
+color: rgba(80, 69, 82, 0.85);
 }
 
 .productImage{
@@ -45,7 +45,7 @@ color: white;
 .detailContainer button{
     color: rgb(27, 2, 15);
     padding: 5px;
-    background-color: rgba(206, 44, 235, 0.7);
+    background-color: rgba(210,173,173,0.7);
     font-size: 0.7rem;
     border-radius: 5px;
     font-weight: bold;

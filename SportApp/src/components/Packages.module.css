@@ -6,7 +6,7 @@
 }
 
 .plan{display: flex;
-    color: white;
+    color: rgba(121, 69, 69, 0.8);
     margin:30px auto;
     opacity: 0.6;
     font-style: italic;
@@ -17,6 +17,6 @@
   content: "";
   margin: 1rem;
   height: 1px;
-  background-color: rgba(225,225,225,0.3);
+  background-color: rgba(121, 69, 69, 0.8);
 }
 

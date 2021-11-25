@@ -1,10 +1,14 @@
-.outerContainer{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+.mainContainer{
+    width: 80%;
     height: 100vh;
+    margin:35px auto;
+}
+
+.outerContainer {
+   margin-top: 150px;
+   height: 700px;
+   display: flex;
+   justify-content: center;
 }
 
 .container {
@@ -14,7 +18,7 @@
     height: fit-content;
     align-items: center;
     flex-direction: column;
-    background-color: rgba(32, 6, 48,0.5);
+    background-color: 	rgb(211, 153, 153);
     border-radius: 10px;
 }
 
@@ -27,7 +31,7 @@
     color: white;
     margin:15px auto;
     text-align: center;
-    text-shadow: 2px 2px #1d0431
+    text-shadow: 2px 2px #d49090
 }
 
 .formInput {
@@ -75,7 +79,7 @@
     margin:5px auto;
     font-size: 0.6rem;
     margin-left: 5px;
-    color: rgb(211, 54, 15);
+    color: rgb(211, 15, 41);
     font-weight: bold;
 }
 
@@ -98,20 +102,21 @@ input[type="checkbox"] {
 }
 
 .checkboxContainer label{
-    color: rgb(45, 211, 156);
+    color: rgb(51, 1, 32);
     font-size: 0.6rem;
+    font-weight: bold;
 }
 
 .checkboxContainer span {
     margin:5px auto;
     font-size: 0.6rem;
     margin-left: 5px;
-    color: rgb(211, 54, 15);
+    color: rgb(211, 15, 41);
     font-weight: bold;
 }
 
 input[type="checkbox"]:checked {
-    background-color: rgb(31, 159, 168);
+    background-color: rgb(51, 1, 32);
     border: none;
 }
 
@@ -129,24 +134,14 @@ input[type="checkbox"]:checked {
     margin-top:15px;
 }
 
-.log{
-    border-bottom: 1px solid white;
-}
-
-.log:hover {
-    color: rgb(211, 54, 15);
-    cursor: pointer;
-    border-bottom: 1px solid rgb(211, 54, 15);
-}
-
 .formButtons button {
     width:60px;
     padding: 7px;
     font-size: 0.7rem;
     border:none;
     border-radius: 5px;
-    background-color: rgba(141, 54, 199, 0.5);
-    color: rgb(17, 1, 27);
+    background-color: #e7cdcf;
+    color: rgb(155, 80, 80);
     font-weight: bold;
     cursor: pointer;
     transition: all ease-in-out;
@@ -201,5 +196,5 @@ input[type="checkbox"]:checked {
 
 .login a:hover {
     border-bottom: 1px solid white;
-    color: white;
+    color: rgb(71, 5, 57);
 }

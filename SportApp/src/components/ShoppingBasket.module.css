@@ -13,7 +13,7 @@
     align-items: center;
     margin-top:60px;
     color: white;
-    background-color: rgba(153, 28, 86,0.7);
+    background-color: rgba(10, 0, 15, 0.2);
     height: 300px;
     border-radius: 15px;
 }
@@ -36,13 +36,13 @@
     color: white;
     font-size: 0.8rem;
     height: 100px;
-    background-color:  rgba(153, 28, 86,0.7);
+    background-color:  rgba(10, 0, 15, 0.2);
     padding: 10px;
     border-radius: 10px;
 }
 
 .buttonContainer button {
-    background-color: rgba(206, 44, 235, 0.7);
+    background-color: rgba(210,173,173,0.7);
     padding: 4px;
     font-size: 0.7rem;
     border-radius: 5px;
@@ -69,7 +69,7 @@
     align-items: center;
     margin-top:60px;
     color: white;
-    background-color: rgba(153, 28, 86,0.7);
+    background-color: rgba(10, 0, 15, 0.2);
     height: 300px;
     border-radius: 15px;
 }

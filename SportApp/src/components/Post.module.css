@@ -1,14 +1,14 @@
 .container{
-    width: 250px;
+    width: 300px;
     margin: 10px;
-    height:200px;
+    height:250px;
     position: relative;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 5px 5px 10px rgb(64, 19, 90);
+    box-shadow: 5px 5px 10px rgb(209, 153, 153);
 }
 .container:hover{
-    box-shadow: 5px 5px 10px rgb(104, 75, 122);
+    box-shadow: 5px 5px 10px rgb(209, 120, 120);
 }
 
 .container img{
@@ -21,8 +21,8 @@
 left: 0;
 bottom: 0;
 padding: 10px;
-color: rgb(27, 2, 15);
-background-color: rgba(225,225,225,0.5);
+color: rgb(82, 9, 49);
+background-color: rgba(209, 153, 153,0.7);
 width: 100%;}
 
 .container h2{

@@ -1,7 +1,7 @@
 import React, {useContext} from 'react';
 import MainNavbar from './MainNavbar';
 import styles from "./Banner.module.css";
-import main from "../images/main.jpg";
+import main from "../images/mainImage.jpg";
 import { Link } from 'react-router-dom';
 import { LoginContext } from '../context/LoginContextProvider';
 
@@ -10,17 +10,13 @@ const Banner = () => {
 
     return (
         <div className={styles.mainContainer}>
-            <div>
+            <div className={styles.innContainer}>
             <img className={styles.mainImage} src={main} alt="Banner"/>
             <MainNavbar/>   
-            <div className={styles.main}>   
-            <span className={styles.left}>   
-            <h1>NTC</h1>
-            <p>Nike Training Club</p>  
-            </span>
+            <div className={styles.main}>         
             <span > 
-            {state.isLoggedIn ?  <div className={styles.title}><h1>Start Your Fitness Journey !</h1></div> :<div className={styles.right}><h1>BECOME A NIKE MEMBER</h1>
-            <p>Create your Nike Member profile and get first access to the very best of Nike products, inspiration and community.</p>  
+            {state.isLoggedIn ?  <div className={styles.title}><h1>Start Your Yoga Journey !</h1></div> :<div className={styles.right}><h1>BECOME A MaYoga MEMBER</h1>
+            <p>Create your MaYoga Member profile and get first access to the very best of MaYoga products, inspiration and community.</p>  
             <Link to="/signup"><button>Create Account</button></Link></div>}  
             </span>
             </div> 
